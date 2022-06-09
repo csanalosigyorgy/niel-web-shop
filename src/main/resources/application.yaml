@@ -1,3 +1,7 @@
+server:
+  servlet:
+    context-path: /niel
+
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/niel_web_shop?serverTimezone=UTC&characterEncoding=utf8
@@ -11,7 +15,11 @@ spring:
       hibernate:
         show_sql: true
         format_sql: true
-    generate-ddl: true
+    generate-ddl: false
+  mvc:
+    format:
+      date: yyyy-MM-dd
+      date-time: yyyy-MM-dd HH:mm:ss
   liquibase:
     change-log: classpath:/db/db.changelog-master.xml
     enabled: true
