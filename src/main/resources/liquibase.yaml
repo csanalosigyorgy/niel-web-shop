@@ -1,0 +1,5 @@
+url: jdbc:postgresql://localhost:5432/niel_web_shop?serverTimezone=UTC&characterEncoding=utf8
+username: postgres
+password: admin
+driver: org.postgresql.Driver
+changeLogFile: /db/db.changelog-master.xml

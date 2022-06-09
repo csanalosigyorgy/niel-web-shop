@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/niel_web_shop?serverTimezone=UTC&characterEncoding=utf8
+    username: postgres
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    generate-ddl: true
+  liquibase:
+    change-log: classpath:/db/db.changelog-master.xml
+    enabled: true
+    drop-first: false
